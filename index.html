@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok 知识导航 · 跨境内容与电商的资源地图</title>
+<meta name="description" content="一份给跨境从业者的 TikTok 资源地图：起步配置、算法流量、内容创作、TikTok Shop、达人营销、广告投放、数据分析、物流收款、合规安全，十个分类近百个真实入口。">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="TikTok 知识导航">
+<meta property="og:description" content="十个分类，近百个真实入口。从注册账号到放大变现的完整资源地图。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23111'/><text x='50' y='70' font-size='54' font-family='Arial' font-weight='bold' fill='%2325F4EE' text-anchor='middle'>T</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="topbar" id="topbar">
+  <div class="shell topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
+          <path d="M14.2 3.5v10.9a3.9 3.9 0 1 1-3.3-3.85" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M14.2 3.5c.35 2.6 2.2 4.3 4.9 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <b>TikTok 知识导航</b>
+        <i>TK Knowledge Map</i>
+      </span>
+    </a>
+
+    <div class="search" id="searchWrap">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M13.2 13.2L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input id="searchInput" type="search" placeholder="搜工具、搜平台、搜关键词…" autocomplete="off" spellcheck="false" aria-label="搜索资源">
+      <kbd class="search-kbd">/</kbd>
+      <button class="search-clear" id="searchClear" type="button" aria-label="清空搜索" hidden>
+        <svg viewBox="0 0 16 16" width="12" height="12" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <button class="fav-toggle" id="favToggle" type="button" aria-pressed="false">
+      <svg viewBox="0 0 20 20" width="14" height="14" fill="none" aria-hidden="true">
+        <path d="M10 2.6l2.3 4.7 5.2.75-3.75 3.65.9 5.15L10 14.4l-4.65 2.45.9-5.15L2.5 8.05l5.2-.75L10 2.6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+      <span>收藏夹</span>
+      <em id="favCount">0</em>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="shell hero-inner">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span>10 个分类 · <b id="totalCount">0</b> 个真实入口</span>
+      </div>
+      <h1>把 TikTok 的<br class="br-mobile">信息差，收成一张地图</h1>
+      <p class="hero-sub">
+        从注册账号、跑通内容，到开店带货、投流放大。<br>
+        每个入口都是能直接点开的官方页面或成熟工具，不放二手传说。
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <b>10</b>
+          <span>知识分类</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <b id="statLinks">0</b>
+          <span>资源入口</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <b>4</b>
+          <span>起号阶段</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 起号路径 -->
+  <section class="shell path-section">
+    <div class="section-head">
+      <h2>新手起号路径</h2>
+      <p>四步走完再谈放大。跳步是最常见的亏钱方式。</p>
+    </div>
+    <div class="path-grid" id="pathGrid"></div>
+  </section>
+
+  <!-- 主体：侧栏 + 内容 -->
+  <div class="shell layout">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <p class="sidebar-label">全部资源</p>
+        <nav id="catNav" class="cat-nav" aria-label="分类导航"></nav>
+
+        <div class="sidebar-tip">
+          <p class="tip-title">怎么用</p>
+          <p class="tip-body">
+            先按分类逛，找到对口的就点星标收起来。
+            搜到的东西会自动过滤，<kbd>/</kbd> 随时唤起搜索。
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="content">
+      <div class="result-bar" id="resultBar" hidden>
+        <p id="resultText"></p>
+        <button type="button" id="resetFilter">重置筛选</button>
+      </div>
+
+      <div id="sections"></div>
+
+      <div class="empty" id="empty" hidden>
+        <div class="empty-mark">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none">
+            <circle cx="21" cy="21" r="13" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M31 31l9 9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="empty-title">没有匹配的入口</p>
+        <p class="empty-sub" id="emptySub">换个关键词试试，比如「选品」「剪辑」「收款」。</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div class="footer-left">
+      <span class="footer-mark">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none"><path d="M14.2 3.5v10.9a3.9 3.9 0 1 1-3.3-3.85" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14.2 3.5c.35 2.6 2.2 4.3 4.9 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <p>TikTok 知识导航 · 人工整理，持续更新</p>
+    </div>
+    <p class="footer-right">
+      所有链接指向第三方站点，内容与政策以官方为准。
+    </p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
